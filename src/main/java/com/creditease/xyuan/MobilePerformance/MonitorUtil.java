@@ -42,7 +42,7 @@ public class MonitorUtil {
 	        String str1=stringBuffer.toString(); 
 	        String str2=str1.substring(str1.indexOf(PackageName),str1.indexOf(PackageName)+28);
 	        str3 = str2.split(":")[1].trim();
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             System.err.println(e);
         }finally{
             try {
@@ -76,7 +76,7 @@ public class MonitorUtil {
 		        String[] str3=str2.split("\\s+");
 		        receive = String.valueOf( Integer.parseInt(str3[1])/1024);
 		        send = String.valueOf( Integer.parseInt(str3[9])/1024);
-	        } catch (InterruptedException e) {
+	        } catch (Exception e) {
 	            System.err.println(e);
 	        }finally{
 	            try {
@@ -110,7 +110,7 @@ public class MonitorUtil {
 	        String str2=str1.substring(str1.indexOf("level"),str1.indexOf("level")+10);
 //	        str3=str2.substring(6,10);
 	        batt = str2.trim();
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             System.err.println(e);
         }finally{
             try {
@@ -139,7 +139,7 @@ public class MonitorUtil {
         	int end = str1.indexOf("Objects");
         	String str2=str1.substring(begin,end);     
         	str3 = String.valueOf( Integer.parseInt(str2.split("\\s+")[2])/1024);
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
         	System.err.println(e);
         }finally{
         	try {
@@ -171,7 +171,7 @@ public class MonitorUtil {
           String str3 =str2.substring(0,7);
           str3 = str3.trim();
           PID=str3;  
-          } catch (InterruptedException e) {
+          } catch (Exception e) {
               System.err.println(e);
           }finally{
               try {

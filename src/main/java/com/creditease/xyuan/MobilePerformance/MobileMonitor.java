@@ -21,7 +21,7 @@ public class MobileMonitor
     	
     	//建立结果目录及文件 
     	String dir = "D:\\MobileMonitor";
-    	SimpleDateFormat df = new SimpleDateFormat("yyyyMMDD-HHmmss");
+    	SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd-HHmmss");
     	String file = String.format("%s\\Monitor%s.csv", dir,df.format(new Date()));
     	MonitorUtil.file = file;
     	File f = new File(file);

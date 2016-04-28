@@ -20,7 +20,7 @@ public class DeviceMonitor implements Runnable{
 	    	bw.write("time,cpu(%),memory(KB),flowin(KB),flowout(KB)\r\n");
 	    	
 	    	while(!MonitorUtil.stop){
-		    	SimpleDateFormat df = new SimpleDateFormat("yyyyMMDD-HHmmss");
+		    	SimpleDateFormat df = new SimpleDateFormat("yyyyMMdd-HHmmss");
 		    	String time = df.format(new Date());
 		    	String cpu = MonitorUtil.GetCPU(packageName);
 		    	String mem = MonitorUtil.GetMemory(packageName);
